@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1509631179647-0177331693ae') no-repeat center;
+
+    background-size: cover;
+    z-index: -1;
+
+    animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #111;
+    color: #fff;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.categories {
+    text-align: center;
+    margin: 20px;
+}
+
+.categories button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #ff4757;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categories button:hover {
+    transform: scale(1.1);
+    background: #ff6b81;
+}
+
+/* Grid */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Animation */
+.photo-grid img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s;
+    animation: fadeIn 0.6s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Box */
+.modal-box {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    animation: pop 0.4s ease;
+}
+
+/* Pop Animation */
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Close */
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Button */
+.modal-box button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background: #ff4757;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-box button:hover {
+    background: #ff6b81;
+    transform: scale(1.1);
+}

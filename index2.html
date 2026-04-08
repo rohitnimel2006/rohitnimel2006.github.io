@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Models</title>
+<link rel="stylesheet" href="index2.css">
+<link rel="icon" type="logo 2.jpeg" href="logo 2.jpeg">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div>RUNWAY DREAMS</div>
+    <div>
+           <a href="index1.html">Home</a>
+        <a href="index2.html">Models</a>
+        <a href="index3.html">Telents</a>
+        <a href="index6.html">Submission</a>
+        <a href="index4.html">About</a>
+        <a href="index5.html">Contact</a>
+    </div>
+</nav>
+
+<h1>MODELS</h1>
+
+<!-- BUTTONS -->
+<div class="categories">
+    <button onclick="showCategory('boys')">Boys</button>
+    <button onclick="showCategory('girls')">Girls</button>
+    <button onclick="showCategory('plus')">Plus Size</button>
+</div>
+
+<!-- GRID -->
+<div id="photoGrid" class="photo-grid"></div>
+
+<!-- MODAL -->
+<div id="modelModal" class="modal">
+    <div class="modal-box">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modalImg">
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+
+        <a id="whatsappBtn" target="_blank">
+            <button>Book on WhatsApp</button>
+        </a>
+    </div>
+</div>
+
+<script src="index2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:#000;
+}
+
+nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+/* MAIN */
+.contact-container{
+    display:flex;
+    height:90vh;
+}
+
+/* LEFT IMAGE */
+.left{
+    flex:1;
+    background:url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e') no-repeat center;
+    background-size:cover;
+    filter:brightness(50%);
+    animation:fade 1s ease;
+}
+
+/* RIGHT FORM */
+.right{
+    flex:1;
+    padding:50px;
+    animation:slide 1s ease;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+/* FORM */
+.form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form input, .form textarea{
+    padding:12px;
+    background:#222;
+    border:none;
+    color:#fff;
+}
+
+.form textarea{
+    grid-column:span 2;
+    height:100px;
+}
+
+.form button{
+    grid-column:span 2;
+    padding:12px;
+    border:none;
+    background:#ff4757;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form button:hover{
+    transform:scale(1.1);
+    background:#ff6b81;
+}
+
+/* FLOAT ICONS */
+.icons{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.icons a{
+    display:block;
+    width:55px;
+    height:55px;
+    margin:10px 0;
+    border-radius:50%;
+    text-align:center;
+    line-height:55px;
+    font-size:22px;
+    color:#fff;
+}
+
+.call{background:#3498db;}
+.mail{background:#2980b9;}
+.whatsapp{background:#25d366;}
+
+/* MAP SECTION */
+.map-section{
+    display:flex;
+    flex-wrap:wrap;
+    padding:40px;
+    gap:30px;
+}
+
+/* MAP */
+.map{
+    flex:2;
+    height:350px;
+    border:none;
+}
+
+/* LINKS */
+.links{
+    flex:1;
+}
+
+.links a{
+    display:block;
+    margin:10px 0;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.links a:hover{
+    color:#ff4757;
+    padding-left:10px;
+}
+
+/* ANIMATION */
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slide{
+    from{opacity:0; transform:translateX(100px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .form{
+        grid-template-columns:1fr;
+    }
+}

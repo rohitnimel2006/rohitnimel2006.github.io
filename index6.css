@@ -1,0 +1,134 @@
+body{
+    margin:0;
+    font-family:Arial;
+    
+    /* 🔥 BACKGROUND IMAGE */
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1509631179647-0177331693ae') no-repeat center;
+    
+    background-size:cover;
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+/* HEADING */
+h1{
+    text-align:center;
+    margin:30px;
+    animation:fadeDown 1s ease;
+}
+
+/* FORM BOX (GLASS EFFECT) */
+.form-container{
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:15px;
+    animation:zoomIn 1s ease;
+}
+
+/* GRID */
+.form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+/* INPUT */
+.form input, .form select, .form textarea{
+    padding:12px;
+    background:rgba(255,255,255,0.1);
+    border:none;
+    /* color:#fff; */
+    border-radius:5px;
+    transition:0.3s;
+}
+
+/* INPUT FOCUS */
+.form input:focus, .form textarea:focus{
+    outline:none;
+    transform:scale(1.05);
+    background:rgba(255,255,255,0.2);
+}
+
+/* FULL WIDTH */
+.full{
+    grid-column:span 2;
+}
+
+/* BUTTON */
+.form button{
+    grid-column:span 2;
+    padding:12px;
+    border:none;
+    background:#ff4757;
+    color:#fff;
+    cursor:pointer;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.form button:hover{
+    background:#ff6b81;
+    transform:scale(1.1);
+}
+
+/* UPLOAD BOX */
+.upload{
+    border:2px dashed #aaa;
+    padding:20px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.upload:hover{
+    border-color:#ff4757;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .form{
+        grid-template-columns:1fr;
+    }
+}
